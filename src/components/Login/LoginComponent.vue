@@ -1,7 +1,7 @@
 <template>
   <div class="photo column">
-    <img src="../assets/holiday-logo.svg" alt="Logo" />
-    <img src="../assets/login-picture.svg" alt="Obrazek logowania" />
+    <img src="../../assets/holiday-logo.svg" alt="Logo" />
+    <img src="../../assets/login-picture.svg" alt="Obrazek logowania" />
     <h1>Witamy!</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at
