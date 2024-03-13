@@ -3,7 +3,7 @@
   <LoginEmailComponent readonly />
   <p>Na Twój adres e-mail wyślemy kod do zmiany hasła</p>
   <p>Wpisz przesłany kod poniżej:</p>
-  <q-form action="/#/">
+  <q-form action="/#/NewPassword">
     <h2>Kod</h2>
     <div class="flex justify-between">
     <q-input
@@ -27,7 +27,7 @@
 <script setup>
 import { ref } from "vue";
 import LoginEmailComponent from "src/components/Login/LoginEmailComponent.vue";
-import ButtonComponent from "src/components/ButtonComponent.vue";
+import ButtonComponent from "src/components/shared/ButtonComponent.vue";
 const inputs = ref([
       { text: '' }, 
       { text: '' }, 
