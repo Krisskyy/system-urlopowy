@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import RequestBoxComponent from "src/components/main/RequestBoxComponent.vue";
+import RequestBoxComponent from "src/components/Main/RequestBoxComponent.vue";
 const boxes = [
   {
     title: "Oczekujące",
