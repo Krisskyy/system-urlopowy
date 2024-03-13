@@ -28,9 +28,9 @@ const routes = [
 
   {
     path: "/main",
-    component: () => import("layouts/main/MainPageLayout.vue"),
+    component: () => import("layouts/Main/MainPageLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/main/RequestsPage.vue") },
+      { path: "", component: () => import("pages/Main/RequestsPage.vue") },
     ],
   },
   // Always leave this as last one,
