@@ -19,9 +19,20 @@ const routes = [
         path: "/NewPassword",
         component: () => import("pages/Login/NewPassword.vue"),
       },
+      {
+        path: "/PasswordChanged",
+        component: () => import("pages/Login/PasswordChanged.vue"),
+      },
     ],
   },
 
+  {
+    path: "/main",
+    component: () => import("layouts/main/MainPageLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/main/RequestsPage.vue") },
+    ],
+  },
   // Always leave this as last one,
   // but you can also remove it
   {

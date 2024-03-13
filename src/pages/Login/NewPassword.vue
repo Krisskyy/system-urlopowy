@@ -1,6 +1,6 @@
 <template>
     <h1>Ustaw nowe hasło</h1>
-    <q-form action="/#/" @submit="onSubmit">
+    <q-form action="/#/PasswordChanged">
         <LoginPasswordComponent :label="'Aktualne hasło'" style="margin-bottom: 5px;" />
         <LoginPasswordComponent :label="'Nowe hasło'" v-model="newPassword" :rules="rules2" />
         <p><span :class="{ 'hidden': !isVisible }">Twoje hasło jest bezpieczne i silne</span></p>
@@ -45,7 +45,7 @@ watchEffect(() => {
     }
     if (/^(?=.*[A-Z])(?=.*[#*!@?])(?=.{8,}$)/.test(newPassword.value)) {
         isVisible.value = true
-        rules2.value = []
+        rules2.value = ref(null)
     } else {
         isVisible.value = false;
         rules2.value = [val => val && val.length <= 0 || 'Spełnij wymogi hasła']
