@@ -51,9 +51,7 @@
 </template>
 
 <script setup>
-const { box } = defineProps({
-  box: String,
-});
+const { box } = defineProps({ box: Object });
 const color = box.color;
 </script>
 
@@ -67,10 +65,12 @@ const color = box.color;
   .box-header {
     border-bottom: 1px solid #8fa9c2;
     padding: 20px;
+
     h2 {
       font: normal normal 600 22px/36px Poppins;
       margin-right: 15px;
     }
+
     .circle-box {
       border-radius: 100%;
       width: 30px;
@@ -82,11 +82,13 @@ const color = box.color;
   }
   .cards {
     padding: 20px;
+
     .card {
       background-color: $classic;
       border-radius: 4px;
       padding: 5px 15px 5px 15px;
       margin-bottom: 20px;
+
       h3 {
         font: normal normal 500 14px Poppins;
         margin-bottom: 10px;
@@ -94,14 +96,17 @@ const color = box.color;
           font-weight: 700;
         }
       }
+
       p {
         font: normal normal 500 14px Poppins;
         margin-bottom: 5px;
       }
+
       h4 {
         font: normal normal 700 14px Poppins;
         margin-top: 0;
       }
+
       .card-footer {
         margin-bottom: 10px;
         .circle-card {

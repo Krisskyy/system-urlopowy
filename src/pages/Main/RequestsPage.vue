@@ -19,6 +19,7 @@
 
 <script setup>
 import RequestBoxComponent from "src/components/Main/RequestBoxComponent.vue";
+
 const boxes = [
   {
     title: "Oczekujące",
@@ -42,11 +43,14 @@ const boxes = [
   margin: 30px 40px;
   border-radius: 10px;
   padding: 30px 40px;
+
   .content-header {
     margin-bottom: 30px;
+
     h1 {
       font: normal normal 500 28px/36px Poppins;
     }
+
     a {
       text-decoration: none;
       color: $button;
