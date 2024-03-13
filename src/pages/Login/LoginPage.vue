@@ -1,6 +1,6 @@
 <template>
   <h1>Logowanie</h1>
-  <q-form action="" @submit="onSubmit">
+  <q-form action="/#/main">
     <LoginEmailComponent />
 
     <LoginPasswordComponent
@@ -26,6 +26,8 @@ import LoginPasswordComponent from "src/components/Login/LoginPasswordComponent.
 import LoginEmailComponent from "src/components/Login/LoginEmailComponent.vue";
 import { ref } from "vue";
 const val = ref(true);
+const isPwd = ref('');
+const password = ref('');
 </script>
 
 <style lang="scss" scoped>
