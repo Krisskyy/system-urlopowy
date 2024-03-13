@@ -9,7 +9,7 @@
 
 <script setup>
 import LoginEmailComponent from "src/components/Login/LoginEmailComponent.vue";
-import ButtonComponent from "src/components/ButtonComponent.vue";
+import ButtonComponent from "src/components/shared/ButtonComponent.vue";
 </script>
 
 <style lang="scss" scoped>

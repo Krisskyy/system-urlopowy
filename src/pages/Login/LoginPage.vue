@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import ButtonComponent from "src/components/ButtonComponent.vue";
+import ButtonComponent from "src/components/shared/ButtonComponent.vue";
 import LoginPasswordComponent from "src/components/Login/LoginPasswordComponent.vue";
 import LoginEmailComponent from "src/components/Login/LoginEmailComponent.vue";
 import { ref } from "vue";

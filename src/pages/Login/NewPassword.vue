@@ -1,7 +1,6 @@
 <template>
     <h1>Ustaw nowe hasło</h1>
     <q-form action="/#/PasswordChanged">
-        <LoginPasswordComponent :label="'Aktualne hasło'" style="margin-bottom: 5px;" />
         <LoginPasswordComponent :label="'Nowe hasło'" v-model="newPassword" :rules="rules2" />
         <p><span :class="{ 'hidden': !isVisible }">Twoje hasło jest bezpieczne i silne</span></p>
         <div class=" checkboxes ">
@@ -16,7 +15,7 @@
 
 <script setup>
 import LoginPasswordComponent from "src/components/Login/LoginPasswordComponent.vue";
-import ButtonComponent from 'src/components/ButtonComponent.vue';
+import ButtonComponent from "src/components/shared/ButtonComponent.vue";
 import { ref, watchEffect } from 'vue'
 const val1 = ref(false);
 const val2 = ref(false);
@@ -80,7 +79,7 @@ const checkboxes = ref([
 <style lang="scss" scoped>
 h1 {
     font: normal normal 600 28px/24px Poppins;
-    padding: 0px 0 12px 0;
+    padding: 50px 0 12px 0;
 }
 p {
     color: #33B600;

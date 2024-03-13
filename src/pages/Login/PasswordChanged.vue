@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import ButtonComponent from 'src/components/ButtonComponent.vue';
+import ButtonComponent from "src/components/shared/ButtonComponent.vue";
 </script>
 
 <style lang="scss" scoped>
