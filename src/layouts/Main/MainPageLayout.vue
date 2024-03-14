@@ -10,24 +10,59 @@
         <a href="#">Nieobecności</a>
         <a href="#">Moje wnioski</a>
         <ButtonComponent :label="'Złóż wniosek'" class="button" />
-        <img
-          src="src/assets/notifications.svg"
-          alt="Notifications"
-          style="margin-left: 30px"
-          @click="showNotifications = !showNotifications"
-        />
-        <q-avatar class="q-avatar" color="yellow" text-color="white"
-          >KJ</q-avatar
-        >
+        <q-btn class="notifications-button" unelevated>
+          <img
+            src="src/assets/notifications.svg"
+            alt="Notifications"
+            style="cursor: pointer"
+            @click="showNotifications = !showNotifications"
+          />
+          <q-menu style="padding: 10px">
+            <NotificationComponentVue :notifications="notifications" />
+          </q-menu>
+        </q-btn>
+        <q-btn class="notifications-button" unelevated>
+          <q-avatar class="q-avatar" color="yellow" text-color="white"
+            >KJ</q-avatar
+          >
+          <q-menu
+            style="
+              padding: 17px 12px;
+              box-shadow: 0px 6px 6px #00000021;
+              border-radius: 10px;
+            "
+          >
+            <div class="profile-header flex items-center">
+              <q-avatar
+                class="q-avatar"
+                color="yellow"
+                text-color="white"
+                style="margin: 0px 18px 0 8px"
+                >KJ</q-avatar
+              >
+              <h2>
+                Krystyna Jankowicz <br /><span
+                  >krystynajankowicz@mediaflex.pl</span
+                >
+              </h2>
+            </div>
+            <div class="profile-rest">
+              <h5 class="profile-options flex items-center">
+                <div class="profile-circle"></div>
+                Mój profil
+              </h5>
+              <h5 class="profile-options flex items-center" style="padding: 0">
+                <div class="profile-circle"></div>
+                Wyloguj
+              </h5>
+            </div>
+          </q-menu>
+        </q-btn>
       </div>
     </q-header>
     <q-page-container>
       <router-view />
     </q-page-container>
-
-    <div v-if="showNotifications" class="notifications">
-      <NotificationComponentVue :notifications="notifications" />
-    </div>
   </q-layout>
 </template>
 
@@ -62,8 +97,6 @@ const notifications = ref([
       "Twoja prośba wniosku o urlop wypoczynkowy w terminie: 23.12.2023r. - 23.01.2024r. została zaakceptowana",
   },
 ]);
-
-const showNotifications = ref(false);
 </script>
 
 <style lang="scss" scoped>
@@ -74,6 +107,7 @@ const showNotifications = ref(false);
 
 .container {
   background-color: $background;
+  padding-bottom: 40px;
 }
 .buttons {
   a {
@@ -105,16 +139,51 @@ const showNotifications = ref(false);
     font: normal normal bold 40px/31px Poppins;
   }
 }
-.notifications {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 6px 6px #00000021;
+
+.notifications-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 40px;
+  margin-left: 30px;
+}
+
+.profile-header {
+  width: 360px;
+  height: 79px;
+  background: $classic 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 6px #00000017;
   border-radius: 10px;
-  width: 384px;
-  height: 358px;
-  position: absolute;
-  top: 80px;
-  right: 100px;
-  padding: 15px 16px;
-  overflow-y: auto;
+
+  h2 {
+    font: normal normal 600 16px/25px Poppins;
+    letter-spacing: 0px;
+  }
+
+  span {
+    font: normal normal normal 12px/18px Poppins;
+    letter-spacing: 0px;
+  }
+}
+
+.profile-rest {
+  .profile-circle {
+    background: #703ada;
+    width: 37px;
+    height: 37px;
+    border-radius: 100%;
+    margin-right: 25px;
+  }
+
+  h5 {
+    font: normal normal 500 14px/21px Poppins;
+    letter-spacing: 0px;
+  }
+
+  .profile-options:first-of-type {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #e0e3e5;
+  }
 }
 </style>

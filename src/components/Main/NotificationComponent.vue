@@ -36,7 +36,7 @@ a {
   font: normal normal 600 14px/24px Poppins;
   color: #703ada;
   text-decoration: none;
-  margin-top: 18px;
+  margin-top: 9px;
 }
 
 h4 {
