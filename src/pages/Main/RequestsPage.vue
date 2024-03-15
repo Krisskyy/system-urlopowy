@@ -235,27 +235,6 @@ const optionsSecond = [
   },
 ];
 
-const optionsThird = [
-  {
-    label: "Karolina Nowak",
-  },
-  {
-    label: "Jan Kowalski",
-  },
-  {
-    label: "Karolina Nowak",
-  },
-  {
-    label: "Jan Kowalski",
-  },
-  {
-    label: "Karolina Nowak",
-  },
-  {
-    label: "Jan Kowalski",
-  },
-];
-
 const computedSelectedLabelFirst = computed(() => {
   return `Wybrano: ${modelFirst.value.length}`;
 });

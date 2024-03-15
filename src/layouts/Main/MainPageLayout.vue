@@ -15,13 +15,12 @@
             src="src/assets/notifications.svg"
             alt="Notifications"
             style="cursor: pointer"
-            @click="showNotifications = !showNotifications"
           />
           <q-menu style="padding: 10px">
             <NotificationComponentVue :notifications="notifications" />
           </q-menu>
         </q-btn>
-        <q-btn class="notifications-button" unelevated>
+        <q-btn class="profile-button" unelevated>
           <q-avatar class="q-avatar" color="yellow" text-color="white"
             >KJ</q-avatar
           >
@@ -133,7 +132,6 @@ const notifications = ref([
   }
 
   .q-avatar {
-    margin-left: 25px;
     width: 52px;
     height: 52px;
     font: normal normal bold 40px/31px Poppins;
@@ -147,6 +145,15 @@ const notifications = ref([
   width: 30px;
   height: 40px;
   margin-left: 30px;
+}
+
+.profile-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  margin-left: 25px;
 }
 
 .profile-header {
